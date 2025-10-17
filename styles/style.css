@@ -32,14 +32,10 @@
 /* TODO: Replace these Google Fonts with the ones you want to use on your site. */
 /* Remember, the more fonts you load, the longer it can take for your page to load. */
 
-/* Eczar Font (for headers or special text) */
-@import url("https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap");
+/* Bubbler One*/
+@import url("https://fonts.google.com/specimen/Bubbler+One"); /* Heading*/
 
-/* Rubik Font (clean and modern for body text) */
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap");
 
-/* Inter Font (great for readability and minimal design) */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /*
 
@@ -101,10 +97,22 @@
 /* TODO: Customize these variables to fit your design. You can add new ones or delete ones you don’t need. */
 
 :root {
+  
   /* Typography */
-  --font-family-body: "Inter", sans-serif;
-  --font-family-heading: "Eczar", serif;
-  --font-family-project-title: "Eczar", serif;
+  --font-family-body: "Bubbler One",
+  font-weight: 400;
+    stroke-width: 1%;
+    stroke: #111;
+  font-style: normal;
+  stroke: #111;
+    stroke-width: 1%;
+  --font-family-heading: "Bubbler One";
+  font-weight: 400;
+  stroke: #111;
+  stroke-width: 1%;
+  font-style: normal;
+  --font-family-project-title: "Bubbler One";
+  
   /* Core Colours */
   --color-text-primary: #222;
   --color-text-secondary: #333;
@@ -113,18 +121,13 @@
   --color-overlay-primary: rgba(82, 0, 255, 0.5);
   --color-highlight: lemonchiffon;
   --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
+ 
   /* Backgrounds */
   --color-bg: #fdfdfd;
   --color-bg-about: #f5f5f5;
   --color-bg-footer: #f5f5f5;
   --color-bg-holding-page: rgba(82, 0, 255, 0.6);
-  /* Headings */
-  --h1-color: #5200ff;
-  --h2-color: #5200ff;
-  --h3-color: #5200ff;
-  --h4-color: #5200ff;
-  --h5-color: #5200ff;
-  --h6-color: #5200ff;
+  
   /* Special Text Colours */
   --color-text-holding-title: #ebedf0;
   --color-text-project-category: #ffffff;
@@ -132,10 +135,12 @@
   --color-text-project-sidebar: #222;
   --color-text-project-title: #5200ff;
   --color-text-work-grid-title: #ffffff;
+ 
   /* Link States */
   --color-link: #5200ff;
   --color-link-hover: #111;
   --color-link-visited: #5200ff;
+ 
   /* Navigation */
   --color-nav-link: #5200ff;
   --color-nav-link-hover: #321575;
@@ -143,6 +148,7 @@
   --color-nav-arrow-hover: #000;
   --color-nav-arrow-stroke: #5200ff;
   --color-nav-arrow-stroke-hover: #000;
+ 
   /* Components */
   --color-bg-full-width: #f5f5f5;
   --color-bg-project-description: #f5f5f5;
@@ -155,22 +161,27 @@
     #8d0b93 50%,
     #321575 100%
   );
+ 
   /* Special Elements */
   --color-icon-heart: darkred;
   --color-text-holding-footer: #f8f8ff;
   --color-bg-selection: #5200ff;
   --color-shadow-stroke: rgba(0, 0, 0, 0.4);
+ 
   /* Assets */
   --image-noise-texture: url(/assets/temp/noise.svg);
+ 
   /* Animation Durations */
   --duration-fast: 0.15s; /* Quick interactions (hover states) */
   --duration-normal: 0.3s; /* Standard transitions (button clicks) */
   --duration-slow: 0.75s; /* Prominent animations (page transitions) */
+ 
   /* Rounded Corners */
   --radius-sm: 0.5rem; /* Small interactive elements */
   --radius-md: 1rem; /* Cards/containers */
   --radius-lg: 2rem; /* Large decorative elements */
   --radius-full: 50%; /* Circles/pills */
+
   /* Padding Scale */
   --padding-tiny: 0.5rem; /* Micro-spacing: icon padding, toggle switches */
   --padding-small: 1rem; /* Compact spacing: mobile buttons, form tags */
@@ -178,6 +189,7 @@
   --padding-large: 3rem; /* Section spacing: content blocks, banner padding */
   --padding-jumbo: 4rem; /* Hero elements: full-width containers, page headers */
   --padding-ultra: 8rem; /* Full-bleed spacing: edge-to-edge layouts, super-sized headers */
+ 
   /* Flex Gap Scale */
   --gap-tiny: 0.5rem; /* Micro-gap: icon spacing, small button groups */
   --gap-small: 1rem; /* Compact gap: card elements, form fields */
@@ -223,7 +235,7 @@ html {
 
 body {
   font-family: var(--font-family-body);
-  background-color: #111;
+  background-color: #fffbde;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -452,7 +464,6 @@ h1 {
   font-family: var(--font-family-heading);
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: red;
 }
 
 h2 {
@@ -472,9 +483,10 @@ h3 {
 
 h4 {
   font-size: 1.2rem;
+  font-family: var(--font-family-heading);
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: blue;
+  color: #111;
 }
 
 h5 {
@@ -489,6 +501,15 @@ h6 {
   line-height: 1.2;
   margin-bottom: 1rem;
   color: greenyellow;
+}
+
+h7 {
+  font-size: 5rem;
+  font-family: var(--font-family-heading);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #161616;
+   -webkit-text-stroke: 3px black;
 }
 
 /* ------------------------------------------------------------------ */
@@ -523,10 +544,11 @@ sup {
 
 /* Main hero headline — usually sits in the intro section */
 .hero-headline {
-  color: var(--color-accent-primary); /* Uses your brand's dominant color */
+  color: #111; /* Uses your brand's dominant color */
   max-width: 40ch; /* Optimal line length for readability (~40 characters) */
   text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
   margin-inline: auto; /* Horizontally centers the text in its container */
+  }
 }
 
 /* Large project title — appears on individual project pages */
@@ -624,7 +646,11 @@ a:active {
 /* -------------------------------------------------------------------------- */
 
 a.nav-link-primary {
-  color: var(--color-nav-link);
+  color: #111;
+    font-family: var(--font-family-heading);
+    font-size: 2rem;
+
+
 }
 a.nav-link-primary:hover {
   color: var(--color-nav-link-hover);
@@ -687,7 +713,9 @@ a.nav-link-primary:hover {
 }
 .hero-header {
   min-height: 1rem; /* Space reserved for logo + nav */
-  background-color: linear-gradient(to top, #111 30%, transparent 30%);
+  background-color: #fffbde;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .nav-branding {
@@ -719,11 +747,9 @@ a.nav-link-primary:hover {
   gap: 3rem;
   align-items: center;
   justify-content: center;
-  padding: var(--padding-small);
+  padding: 3rem;
   text-align: center; /* Keeps text centered */
-  background-image: url(../assets/about/cover.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: ##fffbde;
 }
 
 .hero-icon {
@@ -735,6 +761,8 @@ a.nav-link-primary:hover {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+    padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .hero-footer-navigation {
@@ -1415,6 +1443,10 @@ to keep your styles reusable and consistent.
   h3 {
     font-size: 1.625rem;
   }
+  
+  .h7 {
+font-size: rem;
+}
 
   .h1-full-width,
   .h2-full-width {
