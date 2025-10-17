@@ -223,8 +223,7 @@ html {
 
 body {
   font-family: var(--font-family-body);
-  color: var(--color-text-primary);
-  background: var(--color-bg);
+  background-color: #111;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -453,7 +452,7 @@ h1 {
   font-family: var(--font-family-heading);
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: var(--h1-color);
+  color: red;
 }
 
 h2 {
@@ -461,35 +460,35 @@ h2 {
   font-family: var(--font-family-heading);
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: var(--h2-color);
+  color: violet;
 }
 
 h3 {
   font-size: 1.325rem;
   margin-bottom: 1rem;
   line-height: 1.2;
-  color: var(--h3-color);
+  color: green;
 }
 
 h4 {
   font-size: 1.2rem;
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: var(--h4-color);
+  color: blue;
 }
 
 h5 {
   font-size: 1.1rem;
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: var(--h5-color);
+  color: grey;
 }
 
 h6 {
   font-size: 1rem;
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: var(--h6-color);
+  color: greenyellow;
 }
 
 /* ------------------------------------------------------------------ */
@@ -687,7 +686,8 @@ a.nav-link-primary:hover {
   flex-direction: column;
 }
 .hero-header {
-  min-height: 6rem; /* Space reserved for logo + nav */
+  min-height: 1rem; /* Space reserved for logo + nav */
+  background-color: linear-gradient(to top, #111 30%, transparent 30%);
 }
 
 .nav-branding {
@@ -721,6 +721,9 @@ a.nav-link-primary:hover {
   justify-content: center;
   padding: var(--padding-small);
   text-align: center; /* Keeps text centered */
+  background-image: url(../assets/about/cover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-icon {
