@@ -471,14 +471,15 @@ h2 {
   font-family: var(--font-family-heading);
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: violet;
+  color: rgb(1, 1, 1);
 }
 
 h3 {
+  font-family: var(--font-family-heading);
   font-size: 1.325rem;
   margin-bottom: 1rem;
   line-height: 1.2;
-  color: green;
+  color: rgb(1, 1, 1);
 }
 
 h4 {
@@ -996,6 +997,8 @@ a.nav-link-primary:hover {
   grid-row: 2 / 3; /* Text spans the second row */
 }
 
+p {font-family: var(--font-family-heading);}
+
 /* 
 
 ███████  ██████   ██████  ████████ ███████ ██████  
@@ -1294,6 +1297,11 @@ a.nav-link-primary:hover {
      • CSS: styles/interactive-blobs.css
      • JS:  js/interactive-blobs.js
 ---------------------------------------------------------------- */
+
+.holding-page-wrapper {
+  background-image: url(../assets/indexcover.png);
+   background-size: cover;
+}
 
 .holding-page-animation {
   width: 10rem;
